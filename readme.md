@@ -37,3 +37,9 @@ Add the following to `.babelrc`:
 | :------- | :-------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `dir`    | `"web_modules"` | Location of the web modules. Should usually match the `--dest` option for @pika/web.                                                              |
 | `ignore` | `[]`            | Exact names of modules to ignore, if you find it transforming things it shouldn’t (e.g. `"react"` will match `"react"` but ignore `"react-dom"`). |
+
+## Examples
+
+[TypeScript + @pika/web][pika-web-preact]
+
+[pika-web-preact]: https://github.com/dangodev/pika-web-preact

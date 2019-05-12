@@ -1,11 +1,12 @@
 {
   "name": "babel-plugin-import-pika-web",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "ESM import transformer for @pika/web",
   "author": "dangodev",
   "license": "ISC",
   "scripts": {
     "build": "pack build",
+    "publish": "pack publish",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "lint": "eslint --ext .ts,.tsx src"
