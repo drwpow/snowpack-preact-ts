@@ -21,9 +21,11 @@
       ]
     ]
   },
+  "dependencies": {
+    "@babel/helper-plugin-utils": "^7.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.4",
-    "@babel/helper-plugin-utils": "^7.0.0",
     "@babel/types": "^7.4.4",
     "@pika/pack": "^0.3.7",
     "@pika/plugin-build-node": "^0.3.16",
@@ -39,5 +41,8 @@
     "jest": "^24.8.0",
     "ts-jest": "^24.0.2",
     "typescript": "^3.4.5"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0"
   }
 }
