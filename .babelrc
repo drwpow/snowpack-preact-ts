@@ -1,0 +1,3 @@
+{
+  "plugins": [["import-pika-web", { "dir": "./dist/web_modules" }]]
+}

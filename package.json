@@ -1,0 +1,41 @@
+{
+  "scripts": {
+    "build": "npm run build:ts && npm run build:esm && npm run build:js && npm run copy:html",
+    "build:ts": "tsc",
+    "build:esm": "pika-web --dest dist/web_modules",
+    "build:js": "babel dist -d dist",
+    "copy:html": "cp src/index.html dist/index.html",
+    "lint": "eslint --ext .ts,.tsx src --ignore 'web_modules/**/*.js'",
+    "prestart": "npm run build",
+    "start": "serve -s dist"
+  },
+  "@pika/web": {
+    "webDependencies": [
+      "preact",
+      "preact-router",
+      "highlight.js"
+    ]
+  },
+  "dependencies": {
+    "highlight.js": "^9.15.6",
+    "preact": "^8.4.2",
+    "preact-router": "^2.6.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@pika/web": "^0.4.2",
+    "@typescript-eslint/eslint-plugin": "^1.8.0",
+    "@typescript-eslint/parser": "^1.8.0",
+    "babel-plugin-import-pika-web": "0.0.2",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-typescript": "^4.0.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "serve": "^11.0.0",
+    "typescript": "^3.4.5"
+  }
+}
