@@ -1,0 +1,9 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": ["prettier", "prettier/@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "curly": ["error", "all"],
+    "@typescript-eslint/camelcase": "off"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "babel-plugin-import-pika-web",
+  "version": "0.0.1",
+  "description": "ESM import transformer for @pika/web",
+  "author": "dangodev",
+  "license": "ISC",
+  "scripts": {
+    "build": "pack build",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint --ext .ts,.tsx src"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-ts-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/helper-plugin-utils": "^7.0.0",
+    "@babel/types": "^7.4.4",
+    "@pika/pack": "^0.3.7",
+    "@pika/plugin-build-node": "^0.3.16",
+    "@pika/plugin-ts-standard-pkg": "^0.3.16",
+    "@types/babel__core": "^7.1.1",
+    "@types/babel__traverse": "^7.0.6",
+    "@types/jest": "^24.0.12",
+    "@typescript-eslint/eslint-plugin": "^1.8.0",
+    "@typescript-eslint/parser": "^1.8.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.5"
+  }
+}
