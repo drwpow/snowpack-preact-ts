@@ -11,7 +11,7 @@ export function forwardSlash(str: string): string {
 }
 
 function transformImport({ filename, moduleName, webModulesDir }: TransformImportParams): string {
-  let newImport = `${relative(dirname(filename), webModulesDir)}/${moduleName}.js`;
+  let newImport = `${relative(dirname(filename), webModulesDir)}/${moduleName}`;
   if (newImport[0] !== '.') {
     newImport = `./${newImport}`;
   }

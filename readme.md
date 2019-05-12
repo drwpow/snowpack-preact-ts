@@ -36,7 +36,12 @@ Add the following to `.babelrc`:
 | Name     | Default         | Description                                                                                                                                       |
 | :------- | :-------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `dir`    | `"web_modules"` | Location of the web modules. Should usually match the `--dest` option for @pika/web.                                                              |
+| `addJS`  | `true`          | Append `.js` at the end of all modules.<sup>\*</sup>                                                                                              |
 | `ignore` | `[]`            | Exact names of modules to ignore, if you find it transforming things it shouldn’t (e.g. `"react"` will match `"react"` but ignore `"react-dom"`). |
+
+_\* Note: this will add `.js` to **all** modules, even if it’s already there.
+This will assume your project is perfectly consistent in using or not using
+extensions._
 
 ## Examples
 

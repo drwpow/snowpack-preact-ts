@@ -7,7 +7,7 @@ describe('transformImport method', () => {
       moduleName: 'vue',
       webModulesDir: '/user/test/code/web_modules',
     };
-    expect(transformImport(params)).toBe('./web_modules/vue.js');
+    expect(transformImport(params)).toBe('./web_modules/vue');
   });
 
   it('works for parent roots', () => {
@@ -16,7 +16,7 @@ describe('transformImport method', () => {
       moduleName: 'vue',
       webModulesDir: '/user/test/code/web_modules',
     };
-    expect(transformImport(params)).toBe('../web_modules/vue.js');
+    expect(transformImport(params)).toBe('../web_modules/vue');
   });
 });
 
