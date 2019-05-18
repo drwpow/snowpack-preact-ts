@@ -1,4 +1,4 @@
-import { h } from "../web_modules/preact.js";
+import { h } from "../../web_modules/preact.js";
 
 var Home = function () {
   return h("h1", null, "This is the home page!");
