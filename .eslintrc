@@ -3,17 +3,30 @@
   "env": {
     "browser": true
   },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "extends": [
-    "airbnb-typescript",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "airbnb",
     "prettier",
     "prettier/@typescript-eslint",
     "prettier/react"
   ],
   "plugins": ["@typescript-eslint", "prettier", "react"],
   "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {} // use <root>/tsconfig.json
+    },
     "react": { "pragma": "h" }
   },
   "rules": {
-    "@typescript-eslint/camelcase": "off"
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-var-requires": "off"
   }
 }

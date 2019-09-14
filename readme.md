@@ -1,6 +1,6 @@
 # Preact + TypeScript + @pika/web Example
 
-Example using TypeScript, Preact, and [@pika/web], a new ESM bundler.
+Example using TypeScript, Preact, and [@pika/web][@pika/web], a new ESM bundler.
 
 ## Example
 
@@ -11,17 +11,14 @@ npm start
 
 It’ll run a multi-page app at `localhost:5000`.
 
-## Babel Plugin
+### Dev server
 
-This example app makes use of [babel-plugin-import-pika-web][babel-plugin].
-It transforms all absolute imports like so:
-
-```js
-import preact from "preact"; // Transforms this 🚫
-import preact from "./web_modules/preact.js"; // Into this ✅
+```bash
+npm run dev
 ```
 
-[Read the docs][babel-plugin] to learn more.
+_Note: changes to TypeScript & CSS files will re-build automatically, but
+changes to `src/index.html` will require a restart of the dev server_
 
 [@pika/web]: https://github.com/pikapkg/web
 [babel-plugin]: https://github.com/dangodev/babel-plugin-import-pika-web
