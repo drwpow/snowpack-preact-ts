@@ -61,7 +61,7 @@ function extend(obj, props) {
 }
 
 function applyRef(ref, value) {
-  if (ref != null) {
+  if (ref) {
     if (typeof ref == 'function') ref(value);else ref.current = value;
   }
 }
@@ -721,4 +721,3 @@ var preact = {
 
 export default preact;
 export { Component, cloneElement, h as createElement, createRef, h, options, render, rerender };
-//# sourceMappingURL=preact.js.map

@@ -363,4 +363,3 @@ Router.Link = Link;
 
 export default Router;
 export { Link, Route, Router, getCurrentUrl, route, subscribers };
-//# sourceMappingURL=preact-router.js.map

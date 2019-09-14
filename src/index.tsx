@@ -1,5 +1,5 @@
-import { h, render } from "preact";
-import App from "./components/App";
+import { h, render } from "/web_modules/preact.js";
+import App from "./components/App.js";
 
 const appMount = document.querySelector("#app");
 if (appMount) render(<App />, appMount);
