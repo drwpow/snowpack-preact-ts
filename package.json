@@ -31,7 +31,7 @@
     "@babel/core": "^7.4.4",
     "@pika/web": "^0.4.2",
     "@typescript-eslint/eslint-plugin": "^1.8.0",
-    "@typescript-eslint/parser": "^1.8.0",
+    "@typescript-eslint/parser": "^2.2.0",
     "babel-plugin-import-pika-web": "0.0.5",
     "concurrently": "^4.1.0",
     "copyfiles": "^2.1.0",
