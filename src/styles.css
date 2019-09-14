@@ -1,0 +1,9 @@
+/* auto-import all CSS files in components */
+@import "./components/*.css";
+
+body {
+  background: url("/static/paper_summer.gif");
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.5;
+  margin: 0;
+}
