@@ -23,10 +23,17 @@
     "import/resolver": {
       "typescript": {} // use <root>/tsconfig.json
     },
-    "react": { "pragma": "h" }
+    "react": { "pragma": "h", "version": "16.7" }
   },
   "rules": {
     "@typescript-eslint/camelcase": "off",
-    "@typescript-eslint/no-var-requires": "off"
+    "@typescript-eslint/no-var-requires": "off",
+    "import/extensions": "off", // we need this for browsers
+    "import/no-absolute-path": "off", // we also need this
+    "import/no-unresolved": "off", // TypeScript got this
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".js", ".jsx", ".tsx"] }
+    ]
   }
 }

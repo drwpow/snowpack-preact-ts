@@ -3,25 +3,23 @@
     "build": "rm -rf dist && npm run build:esm && npm run build:ts && npm run build:css && npm run copy",
     "build:css": "postcss src/styles.css -o dist/static/app.min.css",
     "build:css:watch": "postcss src/styles.css -o dist/static/app.min.css -w",
-    "build:esm": "pika-web --dest dist/web_modules",
+    "build:esm": "pika-web --dest dist/web_modules --optimize",
     "build:ts": "tsc",
     "build:ts:watch": "tsc -w",
     "copy": "copyfiles 'src/*.html' 'src/**/*.gif' dist -u 1",
     "dev": "npm run build && concurrently 'npm run build:ts:watch' 'npm run build:css:watch' 'serve -s dist'",
-    "lint": "eslint --ext .ts,.tsx src --ignore 'web_modules/**/*.js'",
+    "lint": "eslint --ext .ts,.tsx src",
     "prestart": "npm run build",
     "start": "serve -s dist"
   },
   "@pika/web": {
     "webDependencies": [
       "preact",
-      "preact-head-tag",
       "preact-router"
     ]
   },
   "dependencies": {
     "preact": "^8.5.2",
-    "preact-head-tag": "^0.2.0",
     "preact-router": "^2.6.1"
   },
   "devDependencies": {

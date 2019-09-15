@@ -20,8 +20,7 @@
         "node_modules/@types/*",
         "node_modules/*",
         "dist/web_modules/*"
-      ],
-      "*.js": ["node_modules/*", "src/*"]
+      ]
     }
   },
   "exclude": ["node_modules"]
