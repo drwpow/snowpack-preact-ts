@@ -26,7 +26,7 @@
     "@pika/web": "^0.6.1",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
-    "concurrently": "^4.1.2",
+    "concurrently": "^5.0.0",
     "copyfiles": "^2.1.1",
     "cssnano": "^4.1.10",
     "eslint": "^6.4.0",
