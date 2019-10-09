@@ -6,29 +6,21 @@
 
 Example using TypeScript, Preact, and [@pika/web][@pika/web], a new ESM bundler.
 
+## Other Languages
+
+- [Vue][pika-web-vue]
+
 ## Example
 
 ```bash
 npm i
-npm run dev
+npm start
 ```
 
 It’ll run a multi-page app at `localhost:5000`.
 
 _Note: changes to TypeScript & CSS files will re-build automatically, but
 changes to `src/index.html` will require a restart of the dev server_
-
-### ⚠️ Warning
-
-Currently the build will fail with the following error:
-
-```
-Error: 'cloneElement' is not exported by node_modules/preact/dist/preact.umd.js
-```
-
-This was built using a shimmed version of @pika/web. A [PR was
-made][fix-preact] that should fix the build error (you can also see [the fix
-yourself][fix-preact] if you’d like to make the change locally).
 
 ### 💁 Explanation
 
@@ -138,5 +130,5 @@ before):
 
 [@pika/web]: https://github.com/pikapkg/web
 [babel-plugin]: https://github.com/dangodev/babel-plugin-import-pika-web
-[fix-preact]: https://github.com/pikapkg/web/pull/101
+[pika-web-vue]: https://github.com/dangodev/pika-web-vue
 [tsconfig]: https://github.com/pikapkg/web/issues/4#issuecomment-469094924
