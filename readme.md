@@ -6,7 +6,8 @@
 
 # @pika/web + Preact + TypeScript example
 
-Example using TypeScript, Preact, and [@pika/web][@pika/web], a new ESM bundler.
+Example using TypeScript, Preact, and [@pika/web][@pika/web], a new ESM
+bundler. Uses [Sass][sass] for styling.
 
 ## Other Languages
 
@@ -21,7 +22,7 @@ npm start
 
 It’ll run a multi-page app at `localhost:5000`.
 
-_Note: changes to TypeScript & CSS files will re-build automatically, but
+_Note: changes to `.tsx` & `.scss` files will re-build automatically, but
 changes to `src/index.html` will require a restart of the dev server_
 
 ### 💁 Explanation
@@ -53,14 +54,15 @@ import preact from "preact";
 ```
 
 A browser doesn’t know what to do with that! That’s not a proper path, and
-it’s also missing the `.js` extension. However, if you try modifying your TypeScript to:
+it’s also missing the `.js` extension. However, if you try modifying your
+TypeScript to:
 
 ```ts
 import preact from "./web_modules/preact.js";
 ```
 
-Now TypeScript can’t load the files! However, by aliasing these imports a
-special way, we can do something clever:
+Now TypeScript can’t resolve those modules or their types! However, by
+aliasing these imports a special way, we can do something clever:
 
 ```json
   "compilerOptions": {
