@@ -3,7 +3,7 @@
     "build": "rm -rf public && npm run build:esm && npm run build:ts && npm run build:css && npm run copy",
     "build:css": "sass src/app.scss public/static/app.min.css --style compressed --no-source-map",
     "build:css:watch": "sass --watch src/app.scss public/static/app.min.css --style compressed --no-source-map",
-    "build:esm": "pika-web --dest public/web_modules --optimize",
+    "build:esm": "snowpack --dest public/web_modules --optimize",
     "build:ts": "tsc",
     "build:ts:watch": "tsc -w",
     "copy": "copyfiles 'src/*.html' 'src/**/*.gif' public -u 1",
@@ -11,38 +11,37 @@
     "prestart": "npm run build",
     "start": "concurrently 'npm run build:ts:watch' 'npm run build:css:watch' 'serve -s public'"
   },
-  "@pika/web": {
+  "snowpack": {
     "webDependencies": [
       "preact",
       "preact-router"
     ]
   },
   "dependencies": {
-    "preact": "^10.0.0",
-    "preact-router": "^3.0.1"
+    "preact": "^10.2.1",
+    "preact-router": "^3.1.0"
   },
   "devDependencies": {
-    "@pika/web": "^0.6.1",
-    "@typescript-eslint/eslint-plugin": "^2.3.3",
-    "@typescript-eslint/parser": "^2.3.3",
-    "concurrently": "^5.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/parser": "^2.15.0",
+    "concurrently": "^5.0.2",
     "copyfiles": "^2.1.1",
-    "eslint": "^6.5.1",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-prettier": "^6.4.0",
+    "eslint-config-prettier": "^6.9.0",
     "eslint-import-resolver-typescript": "^2.0.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.16.0",
-    "meow": "^5.0.0",
-    "prettier": "^1.18.2",
-    "sass": "^1.23.0",
-    "serve": "^11.2.0",
-    "stylelint": "^10.1.0",
-    "stylelint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.17.0",
+    "prettier": "^1.19.1",
+    "sass": "^1.24.4",
+    "serve": "^11.3.0",
+    "snowpack": "^1.0.2",
+    "stylelint": "^12.0.1",
+    "stylelint-config-prettier": "^8.0.0",
     "stylelint-config-standard": "^19.0.0",
-    "stylelint-order": "^3.1.0",
-    "typescript": "^3.6.3"
+    "stylelint-order": "^4.0.0",
+    "typescript": "^3.7.4"
   }
 }

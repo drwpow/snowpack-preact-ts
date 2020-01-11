@@ -4,9 +4,9 @@
         Scranton Meredith Palmer Memorial Celebrity Rabies Awareness Pro-Am Fun
         Run Race For The Cure](./src/static/michaelscottsdundermifflinscrantonmeredithpalmermemorialcelebrityrabiesawarenessproamfunrunraceforthecure.gif)
 
-# @pika/web + Preact + TypeScript example
+# snowpack + Preact + TypeScript
 
-Example using TypeScript, Preact, and [@pika/web][@pika/web], a new ESM
+Example using TypeScript, Preact, and [snowpack][snowpack], a new ESM
 bundler. Uses [Sass][sass] for styling.
 
 ## Other Languages
@@ -27,7 +27,7 @@ changes to `src/index.html` will require a restart of the dev server_
 
 ### 💁 Explanation
 
-Type handling is the difficult part of using TypeScript with @pika/web, since
+Type handling is the difficult part of using TypeScript with snowpack, since
 browsers don’t support it. The core concepts of pulling this off are:
 
 1. Having a separate `src/` and `dist/` folders
@@ -77,7 +77,7 @@ aliasing these imports a special way, we can do something clever:
 ```
 
 This lets us do the following in our project (we’ll always need to do this
-for all @pika/web modules):
+for all web_modules):
 
 ```ts
 import preact from "/web_modules/preact.js";
@@ -92,7 +92,7 @@ Let’s break down what this tells TypeScript:
 - How should TypeScript treat them differently? Well, it should try and find the `*` in any of the following folders:
   - First, try `node_modules/@types/*` (for the modules that have external types)
   - Next, try `node_modules/*` to see if the original library has types
-  - Lastly, try `web_modules/*` to see if @pika/web ported the types over.
+  - Lastly, try `web_modules/*` to see if snowpack ported the types over.
 
 Usually, the types will be found somewhere within `node_modules` and
 TypeScript is happy.
@@ -109,7 +109,7 @@ were using for TypeScript also happened to be a valid path the browser
 understands.
 
 If you need to install `web_modules` somewhere else other than the root, then
-you can change the `--dest` of @pika/web as well as the option under
+you can change the `--dest` of snowpack as well as the option under
 `"paths"` in `tsconfig.json` as-needed.
 
 ---
@@ -132,7 +132,6 @@ before):
 }
 ```
 
-[@pika/web]: https://github.com/pikapkg/web
-[babel-plugin]: https://github.com/dangodev/babel-plugin-import-pika-web
 [pika-web-vue]: https://github.com/dangodev/pika-web-vue
+[snowpack]: https://www.snowpack.dev/
 [tsconfig]: https://github.com/pikapkg/web/issues/4#issuecomment-469094924
